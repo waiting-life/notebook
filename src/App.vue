@@ -11,6 +11,7 @@
 }
 body {
   background-color: #ddd;
+  width: 100vw;
 }
 input {
   border: none;

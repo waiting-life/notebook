@@ -14,10 +14,9 @@ export default {
   
   methods: {
     addTodo (todo) {
-      if (todo) {
-        this.$store.commit('addTodo', todo)
-        this.value = ''
-      }
+      if (todo)
+      this.$store.commit('addTodo', todo)
+      this.value = ''
     }
   }
 }
@@ -36,10 +35,27 @@ export default {
   margin-bottom: 30px;
   background-color: #fff;
 }
+/* @media screen and (min-width: 750px) {
+  .home-input {
+    height: 60px;
+  }
+
+} */
+@media screen and (min-width: 375px) and (max-width: 750px) {
+  .home-input {
+    height: 9vw;
+    width: 70vw;
+  }
+  .home-input button {
+    font-size: 4vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 4vw;
+  }
+}
 .home-input input {
   width: 80%;
   height: 100%;
-  /* border-radius: 30px; */
   font-size: 24px;
 }
 input::-webkit-input-placeholder {

@@ -33,18 +33,18 @@ export default {
   max-width: 750px;
 }
 header {
-  /* height: 44px; */
   text-align: center;
-  /* line-height: 44px; */
-  font-size: 40px;
+  font-size: 60px;
   color: pink;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 1.5vw;
 }
-@media screen and (max-width: 750px) {
+@media screen and (min-width: 375px) and (max-width: 750px) {
   #home {
     width: 100%;
-    padding: 0 10px;
+  }
+  #home header {
+    font-size: 10vw;
   }
 }
 </style>

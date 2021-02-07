@@ -14,6 +14,9 @@ export default new Vuex.Store({
     },
     deleteTodo (state, payload) {
       state.todos.splice(payload, 1)
+    },
+    deleteAll (state) {
+      state.todos = ''
     }
   },
   actions: {
