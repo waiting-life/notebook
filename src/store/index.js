@@ -5,8 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    todos: ['老公', '程皮皮', '小哲'],
   },
   mutations: {
+    addTodo (state, payload) {
+      // console.log(state.todo)
+      state.todos.push(payload)
+    },
+    deleteTodo (state, payload) {
+      state.todos.splice(payload, 1)
+    }
   },
   actions: {
   },

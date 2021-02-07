@@ -1,32 +1,43 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-#nav {
-  padding: 30px;
+body {
+  background-color: #ddd;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+input {
+  border: none;
+  outline: none;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+button {
+  outline: none;
+  border: none;
+  background: none;
+}
+a, div {
+  /* 点击高亮我们需要清除 设置为transparent完全透明 */
+  /* 不加这个移动端点击会有高亮 */
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  /* 在移动端浏览器默认的外观在ios上加上这个属性才能给按钮和输入框自定义样式 */
+  -webkit-appearance: none;
+}
+/* 禁用长按页面时的弹出菜单 */
+img, a {
+  -webkit-touch-callout: none;
 }
 </style>
